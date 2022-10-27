@@ -1,0 +1,20 @@
+num_tik = int(input("Веведите количество билетов: "))
+
+for i in range(num_tik):
+    Age = int(input("Введите возраст клиента "+str(i+1)+": "))
+    if Age > 25:
+        print ("Цена билета 1390 р.")
+        t_price += 1390
+    elif Age >=18 and Age <=25:
+        print ("Цена билета 990 р.")
+        t_price += 990
+    else:
+        print ("Билет бесплатный.")
+print("Сумма без скидки: ", t_price, "р.")
+
+if num_tik > 3:
+    discount = int(t_price/100*10)
+    t_price = t_price - discount
+    print ("Скидка за приглашение более чем трех человек: ", discount, "р.")
+
+print ("Итого к оплате: ", t_price, "р.")
